@@ -1,11 +1,14 @@
 # -*- coding: utf-8  -*- 
 from flask import Flask, render_template, request
 
-import tensorflow.compat.v1 as tf
+
 import numpy as np
 import datetime
 
-tf.compat.v1.disable_eager_execution()
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
+#tf.compat.v1.disable_eager_execution()
 
 app = Flask(__name__)
 
